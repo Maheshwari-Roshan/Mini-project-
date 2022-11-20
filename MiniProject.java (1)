@@ -1,0 +1,419 @@
+import java.util.*;
+
+public class MiniProject {
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int n;
+		do{
+		System.out.println("\t\t\tMINI PROJECT");
+
+			System.out.println("\n\n 1.Selection\n 2.Loops\n 3.Star Pattern\n 4.Number Pattern\n 5.Logical Program\n 6.Array 1D\n 7.String\n 8.Conversion\n 9.ArrayList\n 10.Exit");
+	
+	n= sc.nextInt();
+		
+		switch(n){
+		
+		case 1:{
+				char ch;
+				do{
+				System.out.println("\t\t\t1.Selection");
+	    		System.out.println("\na.Salary\nb.Calculator\nc.Exit");
+	    		ch = sc.next().charAt(0);
+	    		
+	    		switch(ch){
+	    			case 'a':{
+	    System.out.println("Enter Basic Pay");
+		   								         int BasicPay=sc.nextInt();
+	                                             int Housrent = BasicPay/100*35;
+	                                             int MedicalAllowance = BasicPay/100*12;
+	                                             int Bonus = BasicPay/100*6;
+                                                 int GrossPay = BasicPay+Housrent+MedicalAllowance+Bonus;
+	                                             int Incometax = BasicPay/100*5;
+	                                             int ConvanceAllowance = BasicPay/100*7;
+	                                             float Zukwat = BasicPay/100*2.5F;
+	                                             float NetIncome = GrossPay-Incometax-ConvanceAllowance-Zukwat;
+    	
+	
+	                                                 System.out.println("SALARY SHEET          ");
+	                                                 System.out.println("BasicPay is         = "+BasicPay);
+	                                                 System.out.println("HousRent is         = "+Housrent);
+	                                                 System.out.println("MedicalAllowance is = "+MedicalAllowance);
+	                                                 System.out.println("Bonus is            = "+Bonus);
+	                                                 System.out.println("_____________________________________");
+	                                                 System.out.println("GrossPay is         = "+GrossPay);
+	                                                 System.out.println("Incometax is        = "+Incometax);
+	                                                 System.out.println("ConvanceAllowance is= "+ConvanceAllowance);
+	                                                 System.out.println("Zukwat is           = "+Zukwat);
+	                                                 System.out.println("_____________________________________");
+	                                                 System.out.println("NetIncome is        = "+NetIncome);
+	    			}
+	    			break;
+	    			case 'b':{
+	    				
+	    													System.out.print("\nEnter Two Values : ");
+										int 	a=sc.nextInt();
+										int 	b=sc.nextInt();
+											System.out.println("\nEnter  Operator : +,	-,	x,	/");
+								char selectorOp=sc.next().charAt(0);
+											
+													switch(selectorOp){
+													
+														case '+':
+															System.out.print("\n\tAddition "+(a+b));
+															break;
+															
+														case '-':
+															System.out.print("\n\tSubtraction "+(a-b));
+															break;
+														case 'x':
+														case 'X':
+														case '*':
+															System.out.print("\n\tMultiplication "+a*b);
+															break;
+														case '/':
+														case '\\':
+															System.out.print("\n\tDivision "+a/b);
+															break;
+														case '%':
+															System.out.print("\n\tRemainder "+a%b);
+							
+													}
+	    				
+	    				}
+	    				break;
+	    		}
+	    	}while(ch!='c');
+		
+		}
+		break;
+		case 2:{
+			char ch;
+		do{
+		System.out.println("\t\t 2.Loops ");
+		System.out.println("a.Table \nb.Name print\nc.Exit ");
+		ch= sc.next().charAt(0);
+		switch(ch){
+		case 'a':{
+		
+		System.out.println("Enter number whose table you want to print ");
+		int table=sc.nextInt();
+		
+		for(int i=1; i<=10; i++){
+			
+			System.out.println(n+"x"+i+"= "+table*i);
+			}
+		
+		}
+		break;
+		case 'b':{
+			System.out.println("Enter any name ");
+			sc.nextLine();
+			String name = sc.nextLine();
+			int length =name.length(); 
+			for(int i=1; i<=length; i++ ){
+				for(int j=1; j<=i; j++){
+				System.out.print(name.charAt(j-1));
+				}
+				System.out.println();
+			}
+		}
+		break;
+		}
+		}while(ch!='c');
+		}
+		break;
+		case 3:{
+			char ch;
+			do{
+			System.out.println("\t\t 3.Star pattern");
+			
+			System.out.println("a.Star pattern 1\nb.Star pattern 2\nc.Exit");
+			ch=sc.next().charAt(0);
+			switch (ch){
+				
+				case'a':{
+					 
+					 System.out.println("How many star you want to print");
+					 int s = sc.nextInt();
+					 for(int i=1; i<=n; i++){
+					 	for(int y=1; y<=i; y++){
+					 	System.out.print("*");
+					 	}
+					 	System.out.println("");
+					 }
+					}
+				break;
+				case'b':{
+					System.out.println("How many star you want to print");
+					 int s = sc.nextInt();
+					 for(int i=1; i<=n; i++){
+					 	for(int y=1; y<=n; y++){
+					 	System.out.print("*");
+					 	}
+					 	System.out.println("");
+					 }
+					
+					}
+					break;
+				}
+		}while(ch!='c');
+			}
+			break;
+			
+			case 4:{
+				char ch;
+				do{
+				System.out.println("\t\t 4.Number pattern");
+				System.out.println("a.Number pattern 1\nb.Number pattern 2\nc.Exit");
+			ch=sc.next().charAt(0);
+			switch (ch){
+				
+				case'a':{
+					 
+					 System.out.println("How many Number you want to print");
+					 int s = sc.nextInt();
+					 for(int i=1; i<=n; i++){
+					 	for(int y=1; y<=i; y++){
+					 	System.out.print(y);
+					 	}
+					 	System.out.println("");
+					 }
+					}
+				break;
+				case'b':{
+					System.out.println("How many star you want to print");
+					 int s = sc.nextInt();
+					 for(int i=1; i<=n; i++){
+					 	for(int y=1; y<=n; y++){
+					 	System.out.print(y);
+					 	}
+					 	System.out.println("");
+					 }
+					
+					}
+					break;
+				}
+			}while(ch!='c');
+		}
+				break;
+				
+				case 5:{
+					char ch;
+				do{
+				System.out.println("\t\t 5.logical Program");
+				System.out.println("a.hal chari program 1\nb. fabonacci series\nc.Exit");
+			ch=sc.next().charAt(0);
+			switch (ch){
+				
+				case'a':{
+					 
+					 System.out.println("How many Number you want to print");
+					 int s = sc.nextInt();
+					 for(int i=1; i<=s; i++){
+					 //	System.out.println(i);
+					 	if(i%3==0&&i%5==0){
+					 				System.out.println("Hal chary");
+					 				continue;
+					 			}
+					 else
+	if(i%5==0){
+					 		
+					 		System.out.println("Hal ");									continue;
+					 		
+					 		}
+					 		else if(i%3==0){
+					 			
+					 			System.out.println("Chary");									continue;
+					 			}
+					 			else if(i%3==0&&i%5==0){
+					 				System.out.println("Hal chary");
+					 				continue;
+					 			}
+					 			System.out.println(i);
+					 
+					 }
+					}
+				break;
+				case'b':{
+					System.out.println("limit  you want to print if fabonacci series");
+					 int s= sc.nextInt();
+					 int a=0,b=1,c;
+					 System.out.println(a+" ");
+					 System.out.println(b+" ");
+					 for(int i=1; i<=s; i++){
+					 	c=a+b;
+					 	
+					 	System.out.println(c);
+					 	a=b;
+					 	b=c;
+					 
+					
+					}
+					break;
+				}
+			}
+			}while(ch!='c');
+					
+					}
+					break;
+					
+					
+					case 6:{
+						char ch;
+						do{
+							System.out.println("a. Array 1d \n b.Exit");
+							ch=sc.next().charAt(0);
+			        switch(ch){
+			        	
+			        	case 'a':{
+			        		
+			        		System.out.println("Enter Elements of array ");
+			        		int n1= sc.nextInt();
+			        		int[] Arr = new int[n1];
+			        		
+			        		for(int i=0; i<Arr.length; i++){
+			        	
+			        			Arr[i] =sc.nextInt();
+			        			
+			        			}
+			        			System.out.println("Elements of Array are ");
+			        	for(int y=0; y<Arr.length; y++){
+			        				
+			        				System.out.println(Arr[y]);
+			        				}
+			        		}
+			        		break;
+			        	
+			        	}
+							
+						}while(ch!='b');
+						}
+						break;
+						case 7:{
+								char ch;
+						do{
+							System.out.println("a. Program for asking name and limit then print it \nb. If want to check position of character\nc. Replace word Program\nd. Exit");
+							ch=sc.next().charAt(0);
+			        switch(ch){
+							case 'a':{
+								
+								System.out.println("Enter any name ");
+								String name = sc.nextLine();
+								String nameq=sc.nextLine();
+								System.out.println("Enter limit of string /name");
+								
+								int limit =sc.nextInt();
+								System.out.println(nameq.substring(limit));
+								
+								}
+								break;
+								case 'b': {
+													
+								System.out.println("Enter any String");
+								String name = sc.nextLine();
+								String nameq=sc.nextLine();
+								System.out.println("Enter Word of string  whose position you want to know");
+								
+								String pso=sc.next();
+								System.out.println(nameq.indexOf(pso));
+									}
+									break;
+									case 'c':{
+														
+								System.out.println("Enter any String ");
+								String name = sc.nextLine();
+								String nameq=sc.nextLine();
+								System.out.println("What you want to replace ");
+								
+								String tar =sc.next();
+						
+								System.out.println("Which new word you want to add");
+								String strn=sc.next();
+								System.out.println(nameq.replace(tar, strn));
+										}
+										break;
+							}
+						
+		}while(ch!='d');
+						}
+						break;
+						case 8:{
+							char ch;
+						do{
+							System.out.println("a. java Long to String \nb. java String to float\nc. String to Integer\nd. String to Long\ne. Exit");
+							ch=sc.next().charAt(0);
+			        switch(ch){
+							case 'a':{
+							
+							System.out.println("Enter any long Integer");
+							Long lo=sc.nextLong();
+							String str =Long.toString(lo);							System.out.println("This is now  in string"+str);
+							}
+						break;
+						case 'b':{
+							
+							System.out.println("Enter any String of numbers");
+						String lo1=	sc.next();
+							String lo=sc.nextLine();
+							float str =Float.parseFloat(lo1);							System.out.println("Now String is in float"+str);
+							}
+						break;
+							case 'c':{
+							
+							System.out.println("Enter any String of numbers");
+						String lo1=	sc.next();
+							String lo=sc.nextLine();
+							int str =Integer.parseInt(lo1);							System.out.println("Now String is in Integer"+str);
+							}
+						break;
+							case 'd':{
+							
+							System.out.println("Enter any String of numbers");
+						String lo1=	sc.next();
+							String lo=sc.nextLine();
+							Long str =Long.parseLong(lo1);							System.out.println("Now String is in Long"+str);
+							}
+						break;
+			        }
+						}while(ch!='e');
+						
+		}
+		break;
+		case 9:{
+				char ch;
+				do{
+				System.out.println("\t\t 9. ArrayList");
+				System.out.println("a. Use Array list for input the data type\nb. Exit");
+				ch=sc.next().charAt(0);
+				switch (ch){
+				
+					case 'a':{
+						
+						System.out.println("Enter Integer  in Array List ");
+						int n2=sc.nextInt();
+						System.out.println("Enter Float in Array list");
+						float f = sc.nextFloat();
+						System.out.println("Enter String in Array list");
+						String str1=sc.nextLine();
+						String str =sc.nextLine();
+						
+						ArrayList al = new ArrayList();
+						
+						al.add(n2);
+						al.add(f);
+						al.add(str
+);
+						System.out.println(al);
+						}
+					
+				}
+				
+		}while(ch!='b');
+		}
+		
+		}
+		}while(n!=10);
+	}
+}
