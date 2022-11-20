@@ -56,34 +56,35 @@ public class MiniProject {
 										int 	a=sc.nextInt();
 										int 	b=sc.nextInt();
 											System.out.println("\nEnter  Operator : +,	-,	x,	/");
-								char selectorOp=sc.next().charAt(0);
+				
+char selectorOp=sc.next().charAt(0);
 											
-													switch(selectorOp){
+			switch(selectorOp){
 													
-														case '+':
-															System.out.print("\n\tAddition "+(a+b));
-															break;
+		case '+':
+	System.out.print("\n\tAddition "+(a+b));
+		break;
 															
-														case '-':
-															System.out.print("\n\tSubtraction "+(a-b));
-															break;
-														case 'x':
-														case 'X':
-														case '*':
-															System.out.print("\n\tMultiplication "+a*b);
-															break;
-														case '/':
-														case '\\':
-															System.out.print("\n\tDivision "+a/b);
-															break;
-														case '%':
-															System.out.print("\n\tRemainder "+a%b);
+		case '-':
+	       System.out.print("\n\tSubtraction "+(a-b));
+	        break;
+	        case 'x':
+		case 'X':
+		case '*':
+		System.out.print("\n\tMultiplication "+a*b);
+	         break;
+	         case '/':
+		case '\\':
+	         System.out.print("\n\tDivision "+a/b);
+		break;
+                case '%':
+	          System.out.print("\n\tRemainder "+a%b);
 							
-													}
+	          }
 	    				
-	    				}
-	    				break;
-	    		}
+	         }
+	        break;
+	        }
 	    	}while(ch!='c');
 		
 		}
